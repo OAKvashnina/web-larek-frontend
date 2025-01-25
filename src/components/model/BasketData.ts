@@ -14,7 +14,7 @@ export class BasketData extends Model<IBasketData> {
     }
 
     getCardsList() {
-        return this._cards.map(item => item.id);
+        return this._cards.filter((item) => item.price).map(item => item.id);
     }
 
     include(id: string) {
