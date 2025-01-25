@@ -1,5 +1,3 @@
-import {IEvents} from "./events";
-
 /**
  * Базовый компонент
  */
@@ -16,7 +14,7 @@ export abstract class Component<T> {
     }
 
     // Установить текстовое содержимое
-    protected setText(element: HTMLElement, value: unknown) {
+    protected setText(element: HTMLElement|HTMLButtonElement, value: unknown) {
         if (element) {
             element.textContent = String(value);
         }
